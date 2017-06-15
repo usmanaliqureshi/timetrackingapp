@@ -42,7 +42,7 @@ class timeApp
 
         if (!$this->connection) {
 
-            die(mysqli_error());
+            die(mysqli_error($this->connection));
 
         }
 
