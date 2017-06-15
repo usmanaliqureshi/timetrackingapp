@@ -1,5 +1,6 @@
 <?php
 
-require_once("config.php");
-
-require_once("class.php");
+/**
+ * Including timeapp.php
+ */
+require_once("timeapp.php");
