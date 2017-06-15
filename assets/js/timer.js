@@ -136,9 +136,9 @@ sendbtn.onclick = function () {
 
     if (task.value == "") {
 
-    task.style.border = "1px solid #ff6b6b";
+        task.style.border = "1px solid #ff6b6b";
 
-    return false;
+        return false;
 
     } else if (time.value == "") {
 
@@ -148,45 +148,45 @@ sendbtn.onclick = function () {
 
     } else {
 
-    sendbtn.disabled = true;
+        sendbtn.disabled = true;
 
-    setTimeout(function () {
+        setTimeout(function () {
 
-        result.innerHTML = "Saving.";
+            result.innerHTML = "Saving.";
 
-    }, 1000);
+        }, 1000);
 
-    setTimeout(function () {
+        setTimeout(function () {
 
-        result.innerHTML = "Saving..";
+            result.innerHTML = "Saving..";
 
-    }, 2000);
+        }, 2000);
 
-    setTimeout(function () {
+        setTimeout(function () {
 
-        result.innerHTML = "Saving....";
+            result.innerHTML = "Saving....";
 
-    }, 3000);
+        }, 3000);
 
-    setTimeout(function () {
+        setTimeout(function () {
 
-        $.post($("#timeApp").attr("action"),
+            $.post($("#timeApp").attr("action"),
 
-            $("#timeApp :input").serializeArray(),
+                $("#timeApp :input").serializeArray(),
 
-            function (info) {
+                function (info) {
 
-                result.innerHTML = info;
+                    result.innerHTML = info;
 
-            });
+                });
 
-        sendbtn.disabled = false;
+            sendbtn.disabled = false;
 
-        clearInput();
+            clearInput();
 
-    }, 4000);
+        }, 4000);
 
-}
+    }
 
 };
 
@@ -201,7 +201,7 @@ function clearInput() {
 
     setTimeout(function () {
 
-        result.innerHTML ="";
+        result.innerHTML = "";
 
     }, 5000);
 
