@@ -7,7 +7,7 @@ if (ACCESSED_DIRECTLY) die("Direct access are not allowed.");
 /**
  * Includes
  */
-include("resources/config.php");
+require_once("resources/functions.php");
 
 /**
  * Variables to get the time and task posted by the user

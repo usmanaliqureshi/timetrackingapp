@@ -1,4 +1,4 @@
-<?php include("resources/config.php"); ?>
+<?php require_once("resources/functions.php"); ?>
 
 <!DOCTYPE html>
 
@@ -24,7 +24,8 @@
             <time>00:00:00</time>
         </h2>
 
-        <input type="text" id="task" name="task" placeholder="Please enter task description" style="width: 175px; text-align: left">
+        <input type="text" id="task" name="task" placeholder="Please enter task description"
+               style="width: 175px; text-align: left">
 
         <input type="hidden" id="time" name="time" value="">
 
