@@ -63,6 +63,20 @@ class timeApp
     }
 
     /**
+     * Sending the query to the MySQL Database
+     * @param $sql_query
+     * @return bool|mysqli_result
+     */
+    public function query($sql_query)
+    {
+
+        $sql_query = mysqli_query($this->connection, $sql_query);
+
+        return $sql_query;
+
+    }
+
+    /**
      * Saving the task details for the user
      * @param $task_description
      * @param $total_time
@@ -80,7 +94,7 @@ class timeApp
         /**
          * Inserting the data into the Database
          */
-        $query = mysqli_query($this->connection, "INSERT INTO times (date, task_desc, time) VALUES ('$date', '$task', '$time')");
+        $query = $this->query("INSERT INTO times (date, task_desc, time) VALUES ('$date', '$task', '$time')");
 
         if ($query) {
 
