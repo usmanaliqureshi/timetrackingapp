@@ -16,7 +16,7 @@
 
 <div style="display: table;margin: 15% auto 0 auto;">
 
-    <form id="timeApp" action="save.php" method="POST" style="margin: 0;">
+    <form id="timeApp" action="savetime.php" method="POST" style="margin: 0;">
 
         <h1>Stopwatch</h1>
 

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Blocking Intruders
+ */
+if (ACCESSED_DIRECTLY) die("Direct access are not allowed.");
 
 /**
  * MySQL Configuration
