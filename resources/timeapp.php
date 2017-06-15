@@ -6,8 +6,14 @@
 class timeApp
 {
 
+    /**
+     * @var private $connection
+     */
     private $connection;
 
+    /**
+     * Construction of the MySQL Connection
+     */
     function __construct()
     {
 
@@ -15,6 +21,9 @@ class timeApp
 
     }
 
+    /**
+     * Connection to be established
+     */
     public function establish_connection()
     {
 
@@ -39,14 +48,34 @@ class timeApp
 
     }
 
+    /**
+     * Escaping the string for security
+     * @param $string
+     * @return string
+     */
+    public function escape_string($string)
+    {
+
+        $escaped_string = mysqli_real_escape_string($this->connection, $string);
+
+        return $escaped_string;
+
+    }
+
+    /**
+     * Saving the task details for the user
+     * @param $task_description
+     * @param $total_time
+     * @param $date
+     */
     public function save_the_task($task_description, $total_time, $date)
     {
 
         /**
          * Escaping the input data
          */
-        $task = mysqli_real_escape_string($this->connection, $task_description);
-        $time = mysqli_real_escape_string($this->connection, $total_time);
+        $task = $this->escape_string($task_description);
+        $time = $this->escape_string($total_time);
 
         /**
          * Inserting the data into the Database
