@@ -1,63 +1,95 @@
-<?php require_once("resources/functions.php"); ?>
-
 <!DOCTYPE html>
+<html lang="en">
 
-<head>
+    <head>
 
-    <title>Track Time</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Time Tracking App - Login</title>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
-    <script type='text/javascript' src='http://code.jquery.com/jquery-1.5.2.js'></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-</head>
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
-<body>
+    </head>
 
-<div style="display: table;margin: 15% auto 0 auto;">
+    <body>
 
-    <form id="timeApp" action="savetime.php" method="POST" style="margin: 0;">
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>Time Tracking App</strong></h1>
+                            <div class="description">
+                            	<p>
+	                            	Track time spent on projects using Time Tracking App.
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Login to the app</h3>
+                            		<p>Enter your username and password to log on:</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" action="" method="post" class="login-form">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        </div>
+			                        <button type="submit" class="btn">Login</button>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
 
-        <h1>Stopwatch</h1>
 
-        <h2>
-            <time>00:00:00</time>
-        </h2>
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
 
-        <input type="text" id="task" name="task" placeholder="Please enter task description"
-               style="width: 175px; text-align: left">
-
-        <input type="hidden" id="time" name="time" value="">
-
-        <input type="button" value="SAVE" id="sendata"/>
-
-    </form>
-
-    <br>
-
-    <input type="button" value="Start" id="start"/>
-
-    <input type="button" value="Pause" id="pause"/>
-
-    <input type="button" value="Stop" id="stop"/>
-
-    <input type="button" value="Reset" id="reset"/>
-
-    <br>
-    <br>
-
-    <span id="status">READY TO START</span>
-
-    <br>
-
-    <span id="result"></span>
-
-    <br>
-
-</div>
-
-<script type="text/javascript" src="assets/js/timer.js"></script>
-
-</body>
+    </body>
 
 </html>
