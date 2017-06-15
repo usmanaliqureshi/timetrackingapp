@@ -1,0 +1,27 @@
+{
+  "name": "timetrackingapp",
+  "version": "1.0.0",
+  "description": "Time Tracking App to track time for various projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usmanaliqureshi/timetrackingapp.git"
+  },
+  "keywords": [
+    "time",
+    "tracking",
+    "timetracking",
+    "app",
+    "php",
+    "projects"
+  ],
+  "author": "Usman Ali Qureshi <usman@usmanaliqureshi.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usmanaliqureshi/timetrackingapp/issues"
+  },
+  "homepage": "https://github.com/usmanaliqureshi/timetrackingapp#readme"
+}
