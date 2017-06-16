@@ -31,3 +31,35 @@ h1 {
     font-size: 14px;
     margin: 0 0 8px 0;
 }
+
+#form-container {
+    display: table;
+    margin: 15% auto 0 auto;
+}
+
+#timeApp {
+    margin: 0;
+}
+
+#timeApp .countdown {
+    font-size: 60px;
+    margin-bottom: 28px;
+    display: block;
+}
+
+#task {
+    width: 300px;
+    height: 42px;
+    text-align: left;
+    padding: 0 8px;
+}
+
+#sendata {
+    height: 42px;
+    margin-left: 5px;
+    padding: 10px 20px;
+}
+
+.timeAppbtn {
+    margin-left: 5px;
+}
