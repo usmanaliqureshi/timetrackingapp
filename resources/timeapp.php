@@ -1,5 +1,7 @@
 <?php
 
+require_once("configuration.php");
+
 /**
  * Class timeApp
  */
@@ -26,14 +28,6 @@ class timeApp
      */
     public function establish_connection()
     {
-
-        /**
-         * MySQL Configuration
-         */
-        define("HOSTNAME", "localhost");
-        define("USERNAME", "root");
-        define("PASSWORD", "");
-        define("DATABASE", "timer");
 
         /**
          * Establishing MySQL Connection
