@@ -102,4 +102,29 @@ class timeApp
 
     }
 
+    public function login($username, $password)
+    {
+
+        $username = $this->escape_string($username);
+
+        $password = $this->escape_string($password);
+
+        $password_md5 = md5($password);
+
+        $query = $this->query("SELECT * FROM users WHERE username = '$username'");
+
+        $user_info = mysqli_fetch_array($query);
+
+        if ($user_info['password'] === $password_md5) {
+
+            header("location: tracktime.php");
+
+        } else {
+
+            header('location: index.php');
+
+        }
+
+    }
+
 }
