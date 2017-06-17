@@ -102,6 +102,11 @@ class timeApp
 
     }
 
+    /**
+     * Processing the login, creating the session and redirecting the user depending on the username and password.
+     * @param $username
+     * @param $password
+     */
     public function login($username, $password)
     {
 
@@ -133,6 +138,10 @@ class timeApp
 
     }
 
+    /**
+     * Checking if the session exists
+     * @return bool
+     */
     public function is_logged_in()
     {
 
