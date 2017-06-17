@@ -117,13 +117,26 @@ class timeApp
 
         if ($user_info['password'] === $password_md5) {
 
+            $_SESSION["user"] = $user_info['username'];
+
             header("location: tracktime.php");
 
+            echo $_SESSION["user"];
+
         } else {
+
+            session_unset();
 
             header('location: index.php');
 
         }
+
+    }
+
+    public function is_logged_in()
+    {
+
+       return (isset($_SESSION['user'])) ? true : false;
 
     }
 

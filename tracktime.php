@@ -1,4 +1,14 @@
-<?php require_once("resources/functions.php"); ?>
+<?php
+
+session_start();
+
+require_once("resources/functions.php");
+
+$timeApp = new timeApp();
+
+if ($timeApp->is_logged_in()) {
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +62,8 @@
 
             <br>
 
+            <span id="user"><a href="logout.php"><?php echo $_SESSION['user'] ?></a></span>
+
         </div>
 
         <!-- Javascript -->
@@ -63,3 +75,11 @@
     </body>
 
 </html>
+
+<?php } else {
+
+    header("location: index.php");
+
+}
+
+?>
