@@ -75,6 +75,7 @@ class timeApp
      * @param $task_description
      * @param $total_time
      * @param $date
+     * @param $user_id
      */
     public function save_the_task($task_description, $total_time, $date, $user_id)
     {
@@ -85,19 +86,23 @@ class timeApp
         $task = $this->escape_string($task_description);
         $time = $this->escape_string($total_time);
         $user_id = $this->escape_string($user_id);
+        $real_user_id = $this->escape_string($_SESSION['user_id']);
 
-        /**
-         * Inserting the data into the Database
-         */
-        $query = $this->query("INSERT INTO times (date, task_desc, time, user_id) VALUES ('$date', '$task', '$time', '$user_id')");
+        $get_user = $this->query("SELECT * FROM users WHERE id = '" . $user_id . "'");
+        $user_details = mysqli_fetch_array($get_user);
 
-        if ($query) {
+        if ($user_details['id'] == $real_user_id) {
 
-            echo "Successfully Inserted";
+            /**
+             * Inserting the data into the Database
+             */
+            $query = $this->query("INSERT INTO times (date, task_desc, time, user_id) VALUES ('$date', '$task', '$time', '$user_id')");
+
+            echo ($query) ? "Successfully Inserted" : "Insertion Failed" . mysqli_error($this->connection);
 
         } else {
 
-            echo "Insertion Failed";
+            echo "User ID mismatched. Please refresh the page and try again.";
 
         }
 

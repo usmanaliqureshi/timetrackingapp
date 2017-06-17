@@ -63,7 +63,7 @@ if ($timeApp->is_logged_in()) {
 
             <br>
 
-            <span id="user"><a href="logout.php"><?php echo $_SESSION['user'] ?></a></span>
+            <span id="user"><a href="logout.php">LOGOUT</a></span>
 
         </div>
 
