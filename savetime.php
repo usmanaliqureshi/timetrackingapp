@@ -12,6 +12,7 @@ require_once("resources/functions.php");
 $time = $_POST['time'];
 $task_desc = $_POST['task'];
 $date = time();
+$user_id = $_POST['user_id'];
 
 $timeApp = new timeApp();
-$timeApp->save_the_task($task_desc, $time, $date);
+$timeApp->save_the_task($task_desc, $time, $date, $user_id);

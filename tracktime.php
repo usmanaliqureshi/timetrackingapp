@@ -40,6 +40,7 @@ if ($timeApp->is_logged_in()) {
                 <h2 class="countdown">00:00:00</h2>
                 <input type="text" id="task" name="task" placeholder="Task Description">
                 <input type="hidden" id="time" name="time" value="">
+                <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
                 <input type="button" value="SAVE" id="sendata" class="btn"/>
 
             </form>

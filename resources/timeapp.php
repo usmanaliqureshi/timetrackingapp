@@ -76,7 +76,7 @@ class timeApp
      * @param $total_time
      * @param $date
      */
-    public function save_the_task($task_description, $total_time, $date)
+    public function save_the_task($task_description, $total_time, $date, $user_id)
     {
 
         /**
@@ -84,11 +84,12 @@ class timeApp
          */
         $task = $this->escape_string($task_description);
         $time = $this->escape_string($total_time);
+        $user_id = $this->escape_string($user_id);
 
         /**
          * Inserting the data into the Database
          */
-        $query = $this->query("INSERT INTO times (date, task_desc, time) VALUES ('$date', '$task', '$time')");
+        $query = $this->query("INSERT INTO times (date, task_desc, time, user_id) VALUES ('$date', '$task', '$time', '$user_id')");
 
         if ($query) {
 
@@ -123,6 +124,8 @@ class timeApp
         if ($user_info['password'] === $password_md5) {
 
             $_SESSION["user"] = $user_info['username'];
+
+            $_SESSION["user_id"] = $user_info['id'];
 
             header("location: tracktime.php");
 
