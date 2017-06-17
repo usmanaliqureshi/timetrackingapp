@@ -117,9 +117,7 @@ class timeApp
     {
 
         $username = $this->escape_string($username);
-
         $password = $this->escape_string($password);
-
         $password_md5 = md5($password);
 
         $query = $this->query("SELECT * FROM users WHERE username = '$username'");
@@ -133,8 +131,6 @@ class timeApp
             $_SESSION["user_id"] = $user_info['id'];
 
             header("location: tracktime.php");
-
-            echo $_SESSION["user"];
 
         } else {
 
@@ -153,7 +149,7 @@ class timeApp
     public function is_logged_in()
     {
 
-       return (isset($_SESSION['user'])) ? true : false;
+        return (isset($_SESSION['user'])) ? true : false;
 
     }
 
