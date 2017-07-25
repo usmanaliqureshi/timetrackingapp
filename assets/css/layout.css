@@ -63,3 +63,17 @@ h1 {
 .timeAppbtn {
     margin-left: 5px;
 }
+
+.logout {
+    background: #5e7ade;
+    color: #fff;
+    border: 1px solid #5e7ade;
+    padding: 6px 12px 5px 12px;
+    border-radius: 3px;
+}
+
+.logout:hover {
+    color: #5e7ade;
+    background: transparent;
+    border: 1px solid #5e7ade;
+}
