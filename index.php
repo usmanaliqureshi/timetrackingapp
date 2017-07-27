@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+require_once("resources/functions.php");
+
+$timeApp = new timeApp();
+
+($timeApp->is_logged_in()) ? $timeApp->redirect('tracktime.php') : false;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
