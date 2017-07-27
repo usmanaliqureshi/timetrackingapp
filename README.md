@@ -1,4 +1,5 @@
 # Time Tracking App (v1.0.1)
+[![Build Status](https://travis-ci.org/usmanaliqureshi/timetrackingapp.svg?branch=master)](https://travis-ci.org/usmanaliqureshi/timetrackingapp)
 
 This is a small app to track the time spent on each task of your daily work routine.
 
