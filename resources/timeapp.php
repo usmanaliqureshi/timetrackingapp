@@ -127,7 +127,6 @@ class timeApp
         if ($user_info['password'] === $password_md5) {
 
             $_SESSION["user"] = $user_info['username'];
-
             $_SESSION["user_id"] = $user_info['id'];
 
             header("location: tracktime.php");
@@ -154,11 +153,12 @@ class timeApp
     }
 
     /**
-     * Redirect to HOME PAGE (index.php)
+     * Redirect to tthe $destination
+     * @param $destination
      */
-    public function redirect_to_home() {
+    public function redirect($destination = 'index.php') {
 
-        header("location: index.php");
+        header("location: " . $destination);
 
     }
 
