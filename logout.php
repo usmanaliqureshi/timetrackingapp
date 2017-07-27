@@ -1,5 +1,9 @@
 <?php
 
-session_unset();
+session_destroy();
 
-header("location: index.php");
+require_once("resources/functions.php");
+
+$timeApp = new timeApp();
+
+$timeApp->redirect();
