@@ -15,12 +15,10 @@ if ($timeApp->is_logged_in()) {
 
     <head>
 
-        <title>Track Time</title>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Time Tracking App - Login</title>
+        <title>Time Tracking App v<?php echo APP_VERSION; ?> - Start Tracking</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -70,6 +68,8 @@ if ($timeApp->is_logged_in()) {
             <span>Logged in as: <b><?php echo $_SESSION["user"]; ?></b></span>
 
         </div>
+
+        <p class="app_name">Time Tracking App v<?php echo APP_VERSION; ?></p>
 
         <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>

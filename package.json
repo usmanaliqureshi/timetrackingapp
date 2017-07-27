@@ -1,6 +1,6 @@
 {
   "name": "timetrackingapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Time Tracking App to track time for various projects",
   "main": "gulpfile.js",
   "scripts": {
