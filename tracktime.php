@@ -79,7 +79,7 @@ if ($timeApp->is_logged_in()) {
 
 <?php } else {
 
-    $timeApp->redirect_to_home();
+    $timeApp->redirect();
 
 }
 

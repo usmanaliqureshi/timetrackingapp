@@ -129,13 +129,13 @@ class timeApp
             $_SESSION["user"] = $user_info['username'];
             $_SESSION["user_id"] = $user_info['id'];
 
-            header("location: tracktime.php");
+            $this->redirect('tracktime.php');
 
         } else {
 
             session_unset();
 
-            header('location: index.php');
+            $this->redirect();
 
         }
 
