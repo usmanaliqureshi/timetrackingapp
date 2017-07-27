@@ -153,4 +153,13 @@ class timeApp
 
     }
 
+    /**
+     * Redirect to HOME PAGE (index.php)
+     */
+    public function redirect_to_home() {
+
+        header("location: index.php");
+
+    }
+
 }

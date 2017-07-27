@@ -79,7 +79,7 @@ if ($timeApp->is_logged_in()) {
 
 <?php } else {
 
-    header("location: index.php");
+    $timeApp->redirect_to_home();
 
 }
 
