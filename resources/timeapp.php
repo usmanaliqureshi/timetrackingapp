@@ -156,7 +156,8 @@ class timeApp
      * Redirect to tthe $destination
      * @param $destination
      */
-    public function redirect($destination = 'index.php') {
+    public function redirect($destination = 'index.php')
+    {
 
         header("location: " . $destination);
 

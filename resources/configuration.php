@@ -1,7 +1,7 @@
 <?php
 /**
-* MySQL Configuration
-*/
+ * MySQL Configuration
+ */
 define("HOSTNAME", "localhost");
 define("USERNAME", "root");
 define("PASSWORD", "");

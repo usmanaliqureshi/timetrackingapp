@@ -8,10 +8,10 @@ $timeApp = new timeApp();
 
 if ($timeApp->is_logged_in()) {
 
-?>
+    ?>
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
     <head>
 
@@ -32,54 +32,54 @@ if ($timeApp->is_logged_in()) {
 
     <body>
 
-        <div id="form-container">
-            <form id="timeApp" action="savetime.php" method="POST">
+    <div id="form-container">
+        <form id="timeApp" action="savetime.php" method="POST">
 
-                <h2 class="countdown">00:00:00</h2>
-                <input type="text" id="task" name="task" placeholder="Task Description">
-                <input type="hidden" id="time" name="time" value="">
-                <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
-                <input type="button" value="SAVE" id="sendata" class="btn"/>
+            <h2 class="countdown">00:00:00</h2>
+            <input type="text" id="task" name="task" placeholder="Task Description">
+            <input type="hidden" id="time" name="time" value="">
+            <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
+            <input type="button" value="SAVE" id="sendata" class="btn"/>
 
-            </form>
+        </form>
 
-            <br>
+        <br>
 
-            <input type="button" value="Start" id="start" class="btn timeAppbtn"/>
-            <input type="button" value="Pause" id="pause" class="btn timeAppbtn"/>
-            <input type="button" value="Stop" id="stop" class="btn timeAppbtn"/>
-            <input type="button" value="Reset" id="reset" class="btn timeAppbtn"/>
+        <input type="button" value="Start" id="start" class="btn timeAppbtn"/>
+        <input type="button" value="Pause" id="pause" class="btn timeAppbtn"/>
+        <input type="button" value="Stop" id="stop" class="btn timeAppbtn"/>
+        <input type="button" value="Reset" id="reset" class="btn timeAppbtn"/>
 
-            <br>
-            <br>
+        <br>
+        <br>
 
-            <span id="status">READY TO START</span>
+        <span id="status">READY TO START</span>
 
-            <br>
+        <br>
 
-            <span id="result"></span>
+        <span id="result"></span>
 
-            <br>
+        <br>
 
-            <span id="user"><a class="logout" href="logout.php">LOGOUT</a></span>
+        <span id="user"><a class="logout" href="logout.php">LOGOUT</a></span>
 
-            <br/><br/>
+        <br/><br/>
 
-            <span>Logged in as: <b><?php echo $_SESSION["user"]; ?></b></span>
+        <span>Logged in as: <b><?php echo $_SESSION["user"]; ?></b></span>
 
-        </div>
+    </div>
 
-        <p class="app_name">Time Tracking App v<?php echo APP_VERSION; ?></p>
+    <p class="app_name">Time Tracking App v<?php echo APP_VERSION; ?></p>
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-        <script type="text/javascript" src="assets/js/timer.js"></script>
+    <script type="text/javascript" src="assets/js/timer.js"></script>
 
     </body>
 
-</html>
+    </html>
 
 <?php } else {
 
@@ -88,3 +88,4 @@ if ($timeApp->is_logged_in()) {
 }
 
 ?>
+

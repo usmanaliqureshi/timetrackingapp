@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Including timeapp.php
  */
