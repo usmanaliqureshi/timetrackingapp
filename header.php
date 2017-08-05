@@ -224,6 +224,8 @@
                     </ul>
                 </li>
 
+                <!-- User Account: style can be found in dropdown.less -->
+
                 <?php
                 $name = $timeApp->get_user_info("name");
                 $designation = $timeApp->get_user_info("designation");
@@ -232,7 +234,6 @@
                 $profile_img = "https://avatars1.githubusercontent.com/u/17906445?v=4&s=460";
                 ?>
 
-                <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?php echo $profile_img; ?>" class="user-image" alt="User Image">
@@ -252,13 +253,13 @@
                         <li class="user-body">
                             <div class="row">
                                 <div class="col-xs-4 text-center">
-                                    <a href="#">Facebook</a>
+                                    <a href="#facebook"><i class="fa fa-facebook fa-md"></i></a>
                                 </div>
                                 <div class="col-xs-4 text-center">
-                                    <a href="#">Twitter</a>
+                                    <a href="#twitter"><i class="fa fa-twitter fa-md"></i></a>
                                 </div>
                                 <div class="col-xs-4 text-center">
-                                    <a href="#">TimeApp</a>
+                                    <a href="#timeapp"><i class="fa fa-clock-o fa-md"></i></a>
                                 </div>
                             </div>
                             <!-- /.row -->
@@ -266,7 +267,7 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="profile.php" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
                                 <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
