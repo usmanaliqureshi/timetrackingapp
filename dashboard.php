@@ -595,12 +595,8 @@ if ($timeApp->is_logged_in()) {
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                v<?php echo APP_VERSION; ?>
-            </div>
-            <strong>Time Tracking App</strong>
-        </footer>
+
+        <?php include_once('footer.php'); ?>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
