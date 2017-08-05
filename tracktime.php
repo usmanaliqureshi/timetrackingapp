@@ -150,33 +150,42 @@ if ($timeApp->is_logged_in()) {
                             </li>
                         </ul>
                     </li>
+
+                    <?php
+                    $name = $timeApp->get_user_info("name");
+                    $designation = $timeApp->get_user_info("designation");
+                    $reg_date = $timeApp->get_user_info("reg_date");
+                    $date = date_create($reg_date);
+                    $profile_img = "https://avatars1.githubusercontent.com/u/17906445?v=4&s=460";
+                    ?>
+
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <img src="<?php echo $profile_img; ?>" class="user-image" alt="User Image">
+                            <span class="hidden-xs"><?php echo $name; ?></span>
                         </a>
+
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="<?php echo $profile_img; ?>" class="img-circle" alt="User Image">
 
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
+                                <p><?php echo $name; ?> - <?php echo $designation; ?>
+                                    <small>Member since <?php echo date_format($date,"M Y");; ?></small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body">
                                 <div class="row">
                                     <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
+                                        <a href="#">Facebook</a>
                                     </div>
                                     <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
+                                        <a href="#">Twitter</a>
                                     </div>
                                     <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
+                                        <a href="#">TimeApp</a>
                                     </div>
                                 </div>
                                 <!-- /.row -->
@@ -210,10 +219,10 @@ if ($timeApp->is_logged_in()) {
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="<?php echo $profile_img; ?>" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p><?php echo $name; ?></p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>

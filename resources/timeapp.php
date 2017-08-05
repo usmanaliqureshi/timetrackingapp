@@ -163,4 +163,30 @@ class timeApp
 
     }
 
+    public function get_user_info($info)
+    {
+
+        $user_id = $_SESSION['user_id'];
+
+        $query = $this->query("SELECT * FROM users WHERE id = '$user_id'");
+
+        $user_info = mysqli_fetch_array($query);
+
+        switch ($info) {
+
+            case ('name' == $info):
+                return $user_info['name'];
+                break;
+
+            case ('designation' == $info):
+                return $user_info['designation'];
+                break;
+
+            case ('reg_date' == $info):
+                return $user_info['reg_date'];
+                break;
+
+        }
+    }
+
 }
