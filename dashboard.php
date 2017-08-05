@@ -301,7 +301,7 @@ if ($timeApp->is_logged_in()) {
                                     <img src="<?php echo $profile_img; ?>" class="img-circle" alt="User Image">
 
                                     <p><?php echo $name; ?> - <?php echo $designation; ?>
-                                        <small>Member since <?php echo date_format($date,"M Y");; ?></small>
+                                        <small>Member since <?php echo date_format($date, "M Y");; ?></small>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->

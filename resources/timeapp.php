@@ -163,6 +163,11 @@ class timeApp
 
     }
 
+    /**
+     * Retrieve User Information from the DB and return
+     * @param $info
+     * @return mixed
+     */
     public function get_user_info($info)
     {
 
