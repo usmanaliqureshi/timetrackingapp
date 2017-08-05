@@ -1298,12 +1298,12 @@ if ($timeApp->is_logged_in()) {
     <!-- Sparkline -->
     <script src="assets/bower_components/jquery-sparkline/dist/jquery.sparkline.js"></script>
     <!-- jvectormap -->
-    <script src="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
     <script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <!-- jQuery Knob Chart -->
-    <script src="assets/bower_components/jquery-knob/dist/jquery.knob.js"></script>
+    <script src="assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
     <!-- daterangepicker -->
-    <script src="assets/bower_components/moment/min/moment.js"></script>
+    <script src="assets/bower_components/moment/min/moment.min.js"></script>
     <script src="assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- datepicker -->
     <script src="assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
