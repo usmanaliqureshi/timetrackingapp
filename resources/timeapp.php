@@ -171,7 +171,7 @@ class timeApp
     public function get_user_info($info)
     {
 
-        $user_id = $_SESSION['user_id'];
+        $user_id = $this->escape_string($_SESSION['user_id']);
 
         $query = $this->query("SELECT * FROM users WHERE id = '$user_id'");
 
