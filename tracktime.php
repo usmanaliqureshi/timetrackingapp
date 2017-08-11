@@ -30,6 +30,9 @@ if ($timeApp->is_logged_in()) {
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="assets/dist/css/skins/_all-skins.css">
 
+        <!-- timeapp.css -->
+        <link rel="stylesheet" href="assets/css/timeapp.css">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -67,30 +70,44 @@ if ($timeApp->is_logged_in()) {
             <section class="content">
 
                 <!-- Default box -->
-                <div class="box">
+                <div class="box transparent-bg">
 
                     <div class="box-body">
 
-                        <div id="form-container">
+                        <div id="form-container" class="timeapp-container">
                             <form id="timeApp" action="savetime.php" method="POST">
 
                                 <h2 class="countdown">00:00:00</h2>
-                                <input type="text" id="task" name="task" placeholder="Task Description">
-                                <input type="hidden" id="time" name="time" value="">
-                                <input type="hidden" id="user_id" name="user_id"
-                                       value="<?php echo $_SESSION["user_id"]; ?>">
-                                <input type="button" value="SAVE" id="sendata" class="btn"/>
+
+	                            <div class="input-group input-group-sm">
+
+		                            <input type="text" id="task" name="task" placeholder="Task Description" class="form-control">
+		                            <input type="hidden" id="time" name="time" value="">
+		                            <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
+
+				                    <span class="input-group-btn">
+					                    <button type="button" id="sendata" class="btn btn-info btn-flat timeAppbtn">SAVE</button>
+				                    </span>
+
+	                            </div>
 
                             </form>
 
-                            <br>
+                            <div class="input-group input-group-sm timeapp-buttons">
+                            <span class="input-group-btn">
+                                <input type="button" value="Start" id="start" class="btn btn-info btn-flat timeAppbtn" />
+                            </span>
+                            <span class="input-group-btn">
+                                <input type="button" value="Pause" id="pause" class="btn btn-info btn-flat timeAppbtn" />
+                            </span>
+                            <span class="input-group-btn">
+                                <input type="button" value="Stop" id="stop" class="btn btn-info btn-flat timeAppbtn" />
+                            </span>
+                            <span class="input-group-btn btn-last">
+                                <input type="button" value="Reset" id="reset" class="btn btn-info btn-flat timeAppbtn" />
+                            </span>
+                            </div>
 
-                            <input type="button" value="Start" id="start" class="btn timeAppbtn"/>
-                            <input type="button" value="Pause" id="pause" class="btn timeAppbtn"/>
-                            <input type="button" value="Stop" id="stop" class="btn timeAppbtn"/>
-                            <input type="button" value="Reset" id="reset" class="btn timeAppbtn"/>
-
-                            <br>
                             <br>
 
                             <span id="status">READY TO START</span>
@@ -98,6 +115,8 @@ if ($timeApp->is_logged_in()) {
                             <br>
 
                             <span id="result"></span>
+
+	                        <br>
 
                         </div>
 

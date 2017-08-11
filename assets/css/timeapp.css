@@ -1,0 +1,42 @@
+/**
+ * CSS Stylesheet for Time Tracking App
+ */
+
+.timeapp-container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+form#timeApp {
+    margin-bottom: 5%;
+}
+
+.timeapp-container .btn {
+
+}
+
+h2.countdown {
+    text-align: center;
+    font-size: 80px;
+}
+
+#status, #result {
+    text-align: center;
+    width: 100%;
+    display: block;
+    float: none;
+    font-size: 20px;
+}
+
+.timeapp-buttons {
+    position: relative;
+    left: 18px;
+}
+
+/**
+  * TimeApp Specific Classes
+  */
+
+.transparent-bg {
+    background: transparent !important;
+}
