@@ -38,6 +38,13 @@
                     <span>Track Time</span>
                 </a>
             </li>
+            <li <?php echo ("/profile.php" == $_SERVER['PHP_SELF']) ? 'class="active"' : ""; ?>>
+                <a href="profile.php">
+                    <i class="fa fa-user-o"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
         </ul>
     </section>
     <!-- /.sidebar -->
