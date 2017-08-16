@@ -66,8 +66,7 @@ if ($timeApp->is_logged_in()) {
                     User Profile
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li><a href="#">Examples</a></li>
+                    <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                     <li class="active">User profile</li>
                 </ol>
             </section>
@@ -109,21 +108,14 @@ if ($timeApp->is_logged_in()) {
                         <!-- About Me Box -->
                         <div class="box box-primary">
                             <div class="box-header with-border">
-                                <h3 class="box-title">About Me</h3>
+                                <h3 class="box-title">About You</h3>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
 
-                                <p class="text-muted">
-                                    B.S. in Computer Science from the University of Tennessee at Knoxville
-                                </p>
+                                 <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
 
-                                <hr>
-
-                                <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
-
-                                <p class="text-muted">Malibu, California</p>
+                                <p class="text-muted">Gujranwala, Pakistan</p>
 
                                 <hr>
 
