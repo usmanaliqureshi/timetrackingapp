@@ -11,6 +11,7 @@ $timeApp = new timeApp();
  */
 $name = $timeApp->get_user_info("name");
 $email = $timeApp->get_user_info("email");
+$location = $timeApp->get_user_info("location");
 $designation = $timeApp->get_user_info("designation");
 $experience = $timeApp->get_user_info("experience");
 $skills = $timeApp->get_user_info("skills");
@@ -118,7 +119,7 @@ if ($timeApp->is_logged_in()) {
 
                                  <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
 
-                                <p class="text-muted">Gujranwala, Pakistan</p>
+                                <p class="text-muted"><?php echo $location ?></p>
 
                                 <hr>
 
@@ -154,7 +155,7 @@ if ($timeApp->is_logged_in()) {
                                 <div class="tab-pane active" id="settings">
                                     <form class="form-horizontal" id="saveprofile" method="POST" action="saveprofile.php">
                                         <div class="form-group">
-                                            <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                            <label for="name" class="col-sm-2 control-label">Name</label>
 
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="name" name="name"
@@ -162,7 +163,7 @@ if ($timeApp->is_logged_in()) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                                            <label for="email" class="col-sm-2 control-label">Email</label>
 
                                             <div class="col-sm-10">
                                                 <input type="email" class="form-control" id="email" name="email"
@@ -170,7 +171,7 @@ if ($timeApp->is_logged_in()) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputName" class="col-sm-2 control-label">Designation</label>
+                                            <label for="designation" class="col-sm-2 control-label">Designation</label>
 
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="designation" name="designation"
@@ -178,20 +179,28 @@ if ($timeApp->is_logged_in()) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputExperience"
+                                            <label for="experience"
                                                    class="col-sm-2 control-label">Experience</label>
 
                                             <div class="col-sm-10">
                                             <textarea class="form-control" id="experience" name="experience"
-                                                      placeholder="Experience"><?php echo $experience; ?>"</textarea>
+                                                      placeholder="Experience"><?php echo $experience; ?></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+                                            <label for="skills" class="col-sm-2 control-label">Skills</label>
 
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="skills" name="skills"
                                                        placeholder="Skills" value="<?php echo $skills; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location" class="col-sm-2 control-label">Location</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="location" name="location"
+                                                       placeholder="Location" value="<?php echo $location; ?>">
                                             </div>
                                         </div>
                                         <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">

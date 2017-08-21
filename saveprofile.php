@@ -13,9 +13,10 @@ require_once("resources/functions.php");
  */
 $name = $_POST['name'];
 $email = $_POST['email'];
+$location = $_POST['location'];
 $designation = $_POST['designation'];
 $experience = $_POST['experience'];
 $skills = $_POST['skills'];
 
 $timeApp = new timeApp();
-$timeApp->save_the_profile($name, $email, $designation, $experience, $skills);
+$timeApp->save_the_profile($name, $email, $location, $designation, $experience, $skills);
