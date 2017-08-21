@@ -183,8 +183,20 @@ class timeApp
                 return $user_info['name'];
                 break;
 
+            case ('email' == $info):
+                return $user_info['email'];
+                break;
+
             case ('designation' == $info):
                 return $user_info['designation'];
+                break;
+
+            case ('experience' == $info):
+                return $user_info['experience'];
+                break;
+
+            case ('skills' == $info):
+                return $user_info['skills'];
                 break;
 
             case ('reg_date' == $info):

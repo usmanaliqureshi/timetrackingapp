@@ -10,7 +10,10 @@ $timeApp = new timeApp();
  * User Information
  */
 $name = $timeApp->get_user_info("name");
+$email = $timeApp->get_user_info("email");
 $designation = $timeApp->get_user_info("designation");
+$experience = $timeApp->get_user_info("experience");
+$skills = $timeApp->get_user_info("skills");
 $reg_date = $timeApp->get_user_info("reg_date");
 $date = date_create($reg_date);
 $profile_img = "https://avatars1.githubusercontent.com/u/17906445?v=4&s=460";
@@ -149,12 +152,12 @@ if ($timeApp->is_logged_in()) {
                             <div class="tab-content">
 
                                 <div class="tab-pane active" id="settings">
-                                    <form class="form-horizontal">
+                                    <form class="form-horizontal" id="saveprofile" method="POST" action="saveprofile.php">
                                         <div class="form-group">
                                             <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName"
+                                                <input type="text" class="form-control" id="name" name="name"
                                                        placeholder="Name" value="<?php echo $name; ?>">
                                             </div>
                                         </div>
@@ -162,15 +165,15 @@ if ($timeApp->is_logged_in()) {
                                             <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                                             <div class="col-sm-10">
-                                                <input type="email" class="form-control" id="inputEmail"
-                                                       placeholder="Email">
+                                                <input type="email" class="form-control" id="email" name="email"
+                                                       placeholder="Email" value="<?php echo $email; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputName" class="col-sm-2 control-label">Designation</label>
 
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="designation"
+                                                <input type="text" class="form-control" id="designation" name="designation"
                                                        placeholder="Designation" value="<?php echo $designation; ?>">
                                             </div>
                                         </div>
@@ -179,16 +182,16 @@ if ($timeApp->is_logged_in()) {
                                                    class="col-sm-2 control-label">Experience</label>
 
                                             <div class="col-sm-10">
-                                            <textarea class="form-control" id="inputExperience"
-                                                      placeholder="Experience"></textarea>
+                                            <textarea class="form-control" id="experience" name="experience"
+                                                      placeholder="Experience"><?php echo $experience; ?>"</textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
 
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputSkills"
-                                                       placeholder="Skills">
+                                                <input type="text" class="form-control" id="skills" name="skills"
+                                                       placeholder="Skills" value="<?php echo $skills; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -201,9 +204,15 @@ if ($timeApp->is_logged_in()) {
                                                 </div>
                                             </div>
                                         </div>
+                                        <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">
-                                                <button type="submit" class="btn btn-danger">Submit</button>
+                                                <button type="submit" id="profilebtn" class="btn btn-danger">Submit</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <div id="result"></div>
                                             </div>
                                         </div>
                                     </form>
@@ -426,6 +435,7 @@ if ($timeApp->is_logged_in()) {
     <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
     <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/profile.js"></script>
     <!-- FastClick -->
     <script src="assets/bower_components/fastclick/lib/fastclick.js"></script>
     <!-- AdminLTE App -->
