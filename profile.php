@@ -194,16 +194,6 @@ if ($timeApp->is_logged_in()) {
                                                        placeholder="Skills" value="<?php echo $skills; ?>">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-2 col-sm-10">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> I agree to the <a href="#">terms and
-                                                            conditions</a>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">
