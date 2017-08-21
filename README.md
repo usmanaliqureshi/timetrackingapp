@@ -1,4 +1,4 @@
-# Time Tracking App (v1.0.1)
+# Time Tracking App (v1.0.2)
 [![Build Status](https://travis-ci.org/usmanaliqureshi/timetrackingapp.svg?branch=master)](https://travis-ci.org/usmanaliqureshi/timetrackingapp)
 
 This is a small app to track the time spent on each task of your daily work routine.
@@ -15,6 +15,13 @@ This is a small app to track the time spent on each task of your daily work rout
 Please feel free to submit any issues at https://github.com/usmanaliqureshi/timetrackingapp/issues and I will try to resolve them for you.
 
 ## Changelog
+
+### v1.0.2
+
+- Added Profile Page
+- New OOP Method to Save Profile Information
+- Improved Method to Get User Information
+- Updated Database Dump File
 
 ### v1.0.1
 
