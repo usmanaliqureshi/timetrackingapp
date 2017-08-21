@@ -206,4 +206,27 @@ class timeApp
         }
     }
 
+    public function save_the_profile($name, $email, $designation, $experience, $skills)
+    {
+
+        /**
+         * Escaping the input data
+         */
+        $escaped_name = $this->escape_string($name);
+        $escaped_email = $this->escape_string($email);
+        $escaped_designation = $this->escape_string($designation);
+        $escaped_experience = $this->escape_string($experience);
+        $escaped_skills = $this->escape_string($skills);
+
+        $username = $this->escape_string($_SESSION['user']);
+
+        /**
+         * Inserting the data into the Database
+         */
+        $query = $this->query("UPDATE users SET name = '$escaped_name', email = '$escaped_email', designation = '$escaped_designation', experience = '$escaped_experience', skills = '$escaped_skills' WHERE username = '$username'");
+
+        echo ($query) ? "<i class='icon fa fa-check'></i> Profile Successfully Updated for " . $username : "Insertion Failed: " . mysqli_error($this->connection);
+
+    }
+
 }
