@@ -1,3 +1,7 @@
+/**
+ * Profile related functionality
+ * @type {Element}
+ */
 var profilebtn = document.getElementById('profilebtn'),
     result = document.getElementById('result'),
     saveprofile = document.getElementById('saveprofile');
@@ -30,16 +34,16 @@ profilebtn.onclick = function (event) {
 
         profilebtn.disabled = false;
 
-        clearInput();
+        clearResult();
 
     }, 2000);
 
 };
 
 /**
- * Clearing the inputs on success
+ * Clearing the content from result div on success
  */
-function clearInput() {
+function clearResult() {
 
     setTimeout(function () {
 
