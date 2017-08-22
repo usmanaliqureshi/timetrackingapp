@@ -210,6 +210,15 @@ class timeApp
         }
     }
 
+    /**
+     * Saving profile information to the database
+     * @param $name
+     * @param $email
+     * @param $location
+     * @param $designation
+     * @param $experience
+     * @param $skills
+     */
     public function save_the_profile($name, $email, $location, $designation, $experience, $skills)
     {
 
