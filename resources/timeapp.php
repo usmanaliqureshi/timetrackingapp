@@ -74,10 +74,9 @@ class timeApp
      * Saving the task details for the user
      * @param $task_description
      * @param $total_time
-     * @param $date
      * @param $user_id
      */
-    public function save_the_task($task_description, $total_time, $date, $user_id)
+    public function save_the_task($task_description, $total_time, $user_id)
     {
 
         /**
@@ -96,7 +95,7 @@ class timeApp
             /**
              * Inserting the data into the Database
              */
-            $query = $this->query("INSERT INTO times (date, task_desc, time, user_id) VALUES ('$date', '$task', '$time', '$user_id')");
+            $query = $this->query("INSERT INTO times (task_desc, time, user_id) VALUES ('$task', '$time', '$user_id')");
 
             echo ($query) ? "Successfully Inserted" : "Insertion Failed" . mysqli_error($this->connection);
 
