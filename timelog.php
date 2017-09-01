@@ -118,10 +118,7 @@ if ($timeApp->is_logged_in()) {
                 } else {
                   echo "0 results";
                 }
-
-                while ($info = $query) {
-                  ?>
-                <?php } ?>
+                ?>
               </table>
             </div>
             <!-- /.box-body -->
@@ -344,7 +341,9 @@ if ($timeApp->is_logged_in()) {
 <script src="assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="assets/dist/js/demo.js"></script>
+
 </body>
 </html>
 
 <?php } ?>
+
