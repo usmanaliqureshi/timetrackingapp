@@ -128,7 +128,7 @@ class timeApp
             $_SESSION["user"] = $user_info['username'];
             $_SESSION["user_id"] = $user_info['id'];
 
-            $this->redirect('tracktime.php');
+            $this->redirect('dashboard.php');
 
         } else {
 
