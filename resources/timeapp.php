@@ -97,7 +97,7 @@ class timeApp
              */
             $query = $this->query("INSERT INTO times (task_desc, time, user_id) VALUES ('$task', '$time', '$user_id')");
 
-            echo ($query) ? "Successfully Inserted" : "Insertion Failed" . mysqli_error($this->connection);
+            echo ($query) ? "Time Successfully Logged" : "Time Log Failed " . mysqli_error($this->connection);
 
         } else {
 
