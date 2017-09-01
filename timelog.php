@@ -91,37 +91,37 @@ if ($timeApp->is_logged_in()) {
                   <th>ID</th>
                   <th>User</th>
                   <th>Date</th>
-                  <th>Project</th>
+                  <th>Time Worked</th>
                   <th>Task Description</th>
                 </tr>
-                <tr>
-                  <td>183</td>
-                  <td><?php echo $name; ?></td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-success">Approved</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>219</td>
-                  <td><?php echo $name; ?></td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-warning">Pending</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td><?php echo $name; ?></td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-primary">Approved</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td><?php echo $name; ?></td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-danger">Denied</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
+                <?php
+                $user_id = $timeApp->escape_string($_SESSION['user_id']);
+                $sql = "SELECT * FROM times WHERE user_id = '$user_id' ORDER BY id ASC";
+                $result = $timeApp->query($sql);
+
+                if ($result->num_rows > 0) {
+                  while ($info = mysqli_fetch_array($result)) {
+                    ?>
+                    <tr>
+                      <td><?php echo $info['id']; ?></td>
+                      <td><?php echo $name; ?></td>
+                      <td><?php
+                        $date = $info['date'];
+                        echo date("D, d M Y - h:i:s a", strtotime($date));
+                        ?>
+                      </td>
+                      <td><?php echo $info['time']; ?></td>
+                      <td><?php echo $info['task_desc']; ?></td>
+                    </tr>
+                    <?php
+                  }
+                } else {
+                  echo "0 results";
+                }
+
+                while ($info = $query) {
+                  ?>
+                <?php } ?>
               </table>
             </div>
             <!-- /.box-body -->
