@@ -348,6 +348,7 @@ if ($timeApp->is_logged_in()) {
             $('.sidebar-menu').tree()
         })
     </script>
+
     </body>
     </html>
 

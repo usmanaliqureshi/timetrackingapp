@@ -38,6 +38,12 @@
                     <span>Track Time</span>
                 </a>
             </li>
+            <li <?php echo ("/timelog.php" == $_SERVER['PHP_SELF']) ? 'class="active"' : ""; ?>>
+                <a href="timelog.php">
+                    <i class="fa fa-book"></i>
+                    <span>Time Log</span>
+                </a>
+            </li>
             <li <?php echo ("/profile.php" == $_SERVER['PHP_SELF']) ? 'class="active"' : ""; ?>>
                 <a href="profile.php">
                     <i class="fa fa-user-o"></i>
