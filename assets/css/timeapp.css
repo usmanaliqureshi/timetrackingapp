@@ -40,3 +40,7 @@ h2.countdown {
 .transparent-bg {
     background: transparent !important;
 }
+
+.messages-menu, .notifications-menu, .tasks-menu {
+    display: none !important;
+}
