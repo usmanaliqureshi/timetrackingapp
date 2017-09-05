@@ -243,6 +243,21 @@ class timeApp
     }
 
     /**
+     * Getting Total Number of Users registered
+     * @return mixed
+     */
+    public function total_registrations()
+    {
+
+        $users = $this->query("SELECT COUNT(*) AS TotalRegistrations  FROM users");
+
+        $total_users = mysqli_fetch_object($users);
+
+        return $total_users->TotalRegistrations;
+
+    }
+
+    /**
      * Getting Total Number of Tasks from the system
      * @return mixed
      */

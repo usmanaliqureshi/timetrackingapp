@@ -93,7 +93,7 @@ if ($timeApp->is_logged_in()) {
                         <!-- small box -->
                         <div class="small-box bg-yellow">
                             <div class="inner">
-                                <h3>44</h3>
+                                <h3><?php echo $timeApp->total_registrations(); ?></h3>
 
                                 <p>User Registrations</p>
                             </div>
