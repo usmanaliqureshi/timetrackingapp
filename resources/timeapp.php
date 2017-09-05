@@ -242,4 +242,19 @@ class timeApp
 
     }
 
+    /**
+     * Getting Total Number of Tasks from the system
+     * @return mixed
+     */
+    public function total_tasks()
+    {
+
+        $tasks = $this->query("SELECT COUNT(DISTINCT task_desc) AS TotalTasks  FROM times");
+
+        $total_tasks = mysqli_fetch_object($tasks);
+
+        return $total_tasks->TotalTasks;
+
+    }
+
 }

@@ -108,7 +108,7 @@ if ($timeApp->is_logged_in()) {
                         <!-- small box -->
                         <div class="small-box bg-red">
                             <div class="inner">
-                                <h3>65</h3>
+                                <h3><?php echo $timeApp->total_tasks(); ?></h3>
 
                                 <p>Tasks Created</p>
                             </div>
