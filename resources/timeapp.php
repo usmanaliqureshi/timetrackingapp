@@ -253,7 +253,7 @@ class timeApp
 
         $total_users = mysqli_fetch_object($users);
 
-        return $total_users->TotalRegistrations;
+        echo $total_users->TotalRegistrations;
 
     }
 
@@ -268,7 +268,7 @@ class timeApp
 
         $total_tasks = mysqli_fetch_object($tasks);
 
-        return $total_tasks->TotalTasks;
+        echo $total_tasks->TotalTasks;
 
     }
 
