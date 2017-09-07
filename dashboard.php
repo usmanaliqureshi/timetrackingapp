@@ -74,12 +74,11 @@ if ($timeApp->is_logged_in()) {
             <section class="content">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="col-lg-4 col-xs-7">
                         <!-- small box -->
                         <div class="small-box bg-green">
                             <div class="inner">
-                                <h3>53<sup style="font-size: 20px">hrs</sup></h3>
-
+                                <h3><?php $timeApp->total_time(); ?></h3>
                                 <p>Time Logged</p>
                             </div>
                             <div class="icon">
@@ -94,7 +93,6 @@ if ($timeApp->is_logged_in()) {
                         <div class="small-box bg-yellow">
                             <div class="inner">
                                 <h3><?php $timeApp->total_registrations(); ?></h3>
-
                                 <p>User Registrations</p>
                             </div>
                             <div class="icon">
@@ -109,7 +107,6 @@ if ($timeApp->is_logged_in()) {
                         <div class="small-box bg-red">
                             <div class="inner">
                                 <h3><?php $timeApp->total_tasks(); ?></h3>
-
                                 <p>Tasks Created</p>
                             </div>
                             <div class="icon">
