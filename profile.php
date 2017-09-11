@@ -44,6 +44,8 @@ if ($timeApp->is_logged_in()) {
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="assets/dist/css/skins/_all-skins.min.css">
 
+        <link rel="stylesheet" href="assets/css/timeapp.css">
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

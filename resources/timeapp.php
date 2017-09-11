@@ -12,6 +12,9 @@ class timeApp
      * @var private $connection
      */
     private $connection;
+    private $hou = 0;
+    private $min = 0;
+    private $sec = 0;
 
     /**
      * Construction of the MySQL Connection
@@ -239,6 +242,91 @@ class timeApp
         $query = $this->query("UPDATE users SET name = '$escaped_name', email = '$escaped_email', location = '$escaped_location', designation = '$escaped_designation', experience = '$escaped_experience', skills = '$escaped_skills' WHERE username = '$username'");
 
         echo ($query) ? "<i class='icon fa fa-check'></i> Profile Successfully Updated for " . $username : "Insertion Failed: " . mysqli_error($this->connection);
+
+    }
+
+    /**
+     * Getting Total Number of Users registered
+     * @return mixed
+     */
+    public function total_registrations()
+    {
+
+        $users = $this->query("SELECT COUNT(*) AS TotalRegistrations  FROM users");
+
+        $total_users = mysqli_fetch_object($users);
+
+        echo $total_users->TotalRegistrations;
+
+    }
+
+    /**
+     * Getting Total Number of Tasks from the system
+     * @return mixed
+     */
+    public function total_tasks()
+    {
+
+        $tasks = $this->query("SELECT COUNT(DISTINCT task_desc) AS TotalTasks  FROM times");
+
+        $total_tasks = mysqli_fetch_object($tasks);
+
+        echo $total_tasks->TotalTasks;
+
+    }
+
+    /**
+     * Calculate total time
+     * @param $times [array]
+     */
+    public function get_total_time($times)
+    {
+
+        if (is_array($times)) {
+
+            $length = sizeof($times);
+
+            for ($x = 0; $x <= $length; $x++) {
+                $split = explode(":", @$times[$x]);
+                $this->hou += @$split[0];
+                $this->min += @$split[1];
+                $this->sec += @$split[2];
+            }
+
+            $seconds = $this->sec % 60;
+            $minutes = $this->sec / 60;
+            $minutes = (integer)$minutes;
+            $minutes += $this->min;
+            $hours = $minutes / 60;
+            $minutes = $minutes % 60;
+            $hours = (integer)$hours;
+            $hours += $this->hou % 24;
+
+            echo "$hours <sup style='font-size: 20px'>hrs</sup> $minutes <sup style='font-size: 20px'>mins</sup> $seconds <sup style='font-size: 20px'>secs</sup>";
+
+        }
+
+    }
+
+    /**
+     * Fetching all logged time from Database and displaying it in a good manner
+     */
+    public function total_time()
+    {
+        $all_time_values = $this->query("SELECT time FROM times");
+
+        $total_time = array();
+
+        if ($all_time_values->num_rows > 0) {
+
+            while ($row = $all_time_values->fetch_array()) {
+
+                array_push($total_time, $row[0]);
+
+            }
+        }
+
+        $this->get_total_time($total_time);
 
     }
 
