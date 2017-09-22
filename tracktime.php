@@ -58,7 +58,7 @@ if ($timeApp->is_logged_in()) {
             <section class="content-header">
                 <h1>
                     Start Tracking
-                    <small>start time tracking</small>
+                    <small>start tracking time</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
