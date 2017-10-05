@@ -77,13 +77,15 @@ if ($timeApp->is_logged_in()) {
               <h3 class="box-title">Details of the logs</h3>
 
               <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                <form action="timelog.php" method="get">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="search" id="search" class="form-control pull-right" placeholder="Search">
 
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
             <!-- /.box-header -->
@@ -98,7 +100,12 @@ if ($timeApp->is_logged_in()) {
                 </tr>
                 <?php
                 $user_id = $timeApp->escape_string($_SESSION['user_id']);
-                $sql = "SELECT * FROM times WHERE user_id = '$user_id' ORDER BY id ASC";
+                $search = $timeApp->escape_string($_GET['search']);
+                if (isset($search)) {
+                  $sql = "SELECT * FROM times WHERE user_id = '$user_id' AND task_desc LIKE '%$search%' ORDER BY id ASC";
+                } else {
+                  $sql = "SELECT * FROM times WHERE user_id = '$user_id' ORDER BY id ASC";
+                }
                 $result = $timeApp->query($sql);
 
                 if ($result->num_rows > 0) {
