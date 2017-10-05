@@ -79,7 +79,7 @@ if ($timeApp->is_logged_in()) {
               <div class="box-tools">
                 <form action="timelog.php" method="get">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="search" id="search" class="form-control pull-right" placeholder="Search">
+                    <input type="text" name="search" id="search" class="form-control pull-right" placeholder="Task Description">
 
                     <div class="input-group-btn">
                       <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
