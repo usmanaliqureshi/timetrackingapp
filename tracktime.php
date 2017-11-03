@@ -70,7 +70,7 @@ if ($timeApp->is_logged_in()) {
             <section class="content">
 
                 <!-- Default box -->
-                <div class="box transparent-bg">
+                <div class="box">
 
                     <div class="box-body">
 
