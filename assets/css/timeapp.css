@@ -44,3 +44,8 @@ h2.countdown {
 .messages-menu, .notifications-menu, .tasks-menu {
     display: none !important;
 }
+
+.btn-info {
+    background-color: #3c8dbc !important;
+    border-color: #3c8dbc !important;
+}
