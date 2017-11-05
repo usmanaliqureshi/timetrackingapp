@@ -45,6 +45,11 @@ h2.countdown {
     display: none !important;
 }
 
+#sendata {
+    background-color: #ca0808 !important;
+    border-color: #ca0808 !important;
+}
+
 .btn-info {
     background-color: #3c8dbc !important;
     border-color: #3c8dbc !important;
