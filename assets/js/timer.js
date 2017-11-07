@@ -67,7 +67,7 @@ start.onclick = function () {
     stop.disabled = false;
     pause.disabled = false;
     reset.disabled = true;
-    document.getElementById('status').innerHTML = "RUNNING";
+    document.getElementById('status').innerHTML = "TRACKING";
 };
 
 /**
@@ -113,7 +113,7 @@ reset.onclick = function () {
     stop.disabled = false;
     pause.disabled = false;
     start.disabled = false;
-    document.getElementById('status').innerHTML = "READY TO START";
+    document.getElementById('status').innerHTML = "READY TO TRACK TIME";
 };
 
 /**
