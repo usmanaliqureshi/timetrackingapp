@@ -79,32 +79,36 @@ if ($timeApp->is_logged_in()) {
 
                                 <h2 class="countdown">00:00:00</h2>
 
-	                            <div class="input-group input-group-sm">
+                                <div class="input-group input-group-sm">
 
-		                            <input type="text" id="task" name="task" placeholder="Task Description" class="form-control">
-		                            <input type="hidden" id="time" name="time" value="">
-		                            <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
+                                    <input type="text" id="task" name="task" placeholder="Task Description"
+                                           class="form-control">
+                                    <input type="hidden" id="time" name="time" value="">
+                                    <input type="hidden" id="user_id" name="user_id"
+                                           value="<?php echo $_SESSION["user_id"]; ?>">
 
 				                    <span class="input-group-btn">
-					                    <button type="button" id="sendata" class="btn btn-info btn-flat timeAppbtn">SAVE</button>
+					                    <button type="button" id="sendata" class="btn btn-info btn-flat timeAppbtn">
+                                            SAVE
+                                        </button>
 				                    </span>
 
-	                            </div>
+                                </div>
 
                             </form>
 
                             <div class="input-group input-group-sm timeapp-buttons">
                             <span class="input-group-btn">
-                                <input type="button" value="Start" id="start" class="btn btn-info btn-flat timeAppbtn" />
+                                <input type="button" value="Start" id="start" class="btn btn-info btn-flat timeAppbtn"/>
                             </span>
                             <span class="input-group-btn">
-                                <input type="button" value="Pause" id="pause" class="btn btn-info btn-flat timeAppbtn" />
+                                <input type="button" value="Pause" id="pause" class="btn btn-info btn-flat timeAppbtn"/>
                             </span>
                             <span class="input-group-btn">
-                                <input type="button" value="Stop" id="stop" class="btn btn-info btn-flat timeAppbtn" />
+                                <input type="button" value="Stop" id="stop" class="btn btn-info btn-flat timeAppbtn"/>
                             </span>
                             <span class="input-group-btn btn-last">
-                                <input type="button" value="Reset" id="reset" class="btn btn-info btn-flat timeAppbtn" />
+                                <input type="button" value="Reset" id="reset" class="btn btn-info btn-flat timeAppbtn"/>
                             </span>
                             </div>
 
@@ -116,7 +120,7 @@ if ($timeApp->is_logged_in()) {
 
                             <span id="result"></span>
 
-	                        <br>
+                            <br>
 
                         </div>
 
