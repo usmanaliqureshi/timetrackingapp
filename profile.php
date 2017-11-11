@@ -119,7 +119,7 @@ if ($timeApp->is_logged_in()) {
                             <!-- /.box-header -->
                             <div class="box-body">
 
-                                 <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+                                <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
 
                                 <p class="text-muted"><?php echo $location ?></p>
 
@@ -155,7 +155,8 @@ if ($timeApp->is_logged_in()) {
                             <div class="tab-content">
 
                                 <div class="tab-pane active" id="settings">
-                                    <form class="form-horizontal" id="saveprofile" method="POST" action="saveprofile.php">
+                                    <form class="form-horizontal" id="saveprofile" method="POST"
+                                          action="saveprofile.php">
                                         <div class="form-group">
                                             <label for="name" class="col-sm-2 control-label">Name</label>
 
@@ -176,7 +177,8 @@ if ($timeApp->is_logged_in()) {
                                             <label for="designation" class="col-sm-2 control-label">Designation</label>
 
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="designation" name="designation"
+                                                <input type="text" class="form-control" id="designation"
+                                                       name="designation"
                                                        placeholder="Designation" value="<?php echo $designation; ?>">
                                             </div>
                                         </div>
@@ -205,10 +207,13 @@ if ($timeApp->is_logged_in()) {
                                                        placeholder="Location" value="<?php echo $location; ?>">
                                             </div>
                                         </div>
-                                        <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION["user_id"]; ?>">
+                                        <input type="hidden" id="user_id" name="user_id"
+                                               value="<?php echo $_SESSION["user_id"]; ?>">
+
                                         <div class="form-group">
                                             <div class="col-sm-offset-2 col-sm-10">
-                                                <button type="submit" id="profilebtn" class="btn btn-danger">Submit</button>
+                                                <button type="submit" id="profilebtn" class="btn btn-danger">Submit
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="form-group">
