@@ -65,5 +65,6 @@ library/vendors/composer
 resources/img/.DS_Store
 resources/sass/HTML
 resources/sass/Rails
+resources/configuration.php
 HTML
 Rails
