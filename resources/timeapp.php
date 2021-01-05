@@ -282,7 +282,7 @@ class timeApp
     public function get_total_time($times)
     {
 
-        if (is_array($times)) {
+        if (!empty($times) && is_array($times)) {
 
             $length = sizeof($times);
 

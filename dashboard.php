@@ -74,6 +74,7 @@ if ($timeApp->is_logged_in()) {
             <section class="content">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
+                <?php if ( ! empty( $timeApp->total_time() ) ) { ?>
                     <div class="col-lg-4 col-xs-7">
                         <!-- small box -->
                         <div class="small-box bg-green">
@@ -89,6 +90,7 @@ if ($timeApp->is_logged_in()) {
                         </div>
                     </div>
                     <!-- ./col -->
+                    <?php } ?>
                     <div class="col-lg-3 col-xs-6">
                         <!-- small box -->
                         <div class="small-box bg-yellow">
