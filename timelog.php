@@ -103,8 +103,8 @@ if ($timeApp->is_logged_in()) {
                                     </tr>
                                     <?php
                                     $user_id = $timeApp->escape_string($_SESSION['user_id']);
-                                    $search = $timeApp->escape_string($_GET['search']);
-                                    if (isset($search)) {
+                                    $search = (isset($_GET['search'])) ? $timeApp->escape_string($_GET['search']) : '';
+                                    if (!empty($search)) {
                                         $sql = "SELECT * FROM times WHERE user_id = '$user_id' AND task_desc LIKE '%$search%' ORDER BY id ASC";
                                     } else {
                                         $sql = "SELECT * FROM times WHERE user_id = '$user_id' ORDER BY id ASC";
