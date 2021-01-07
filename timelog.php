@@ -128,7 +128,11 @@ if ($timeApp->is_logged_in()) {
                                             <?php
                                         }
                                     } else {
-                                        echo "0 results";
+                                        ?>
+                                        <tr>
+                                            <td>0 results</td>
+                                        </tr>
+                                        <?php
                                     }
                                     ?>
                                 </table>
