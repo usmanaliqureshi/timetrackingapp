@@ -59,7 +59,7 @@ if ($timeApp->is_logged_in()) {
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Time Log
+                    Time Logged
                     <small>logs of the time spent on work</small>
                 </h1>
                 <ol class="breadcrumb">

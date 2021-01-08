@@ -41,7 +41,7 @@
             <li <?php echo ("/timelog.php" == $_SERVER['PHP_SELF']) ? 'class="active"' : ""; ?>>
                 <a href="timelog.php">
                     <i class="fa fa-book"></i>
-                    <span>Time Log</span>
+                    <span>Time Logged</span>
                 </a>
             </li>
             <li <?php echo ("/profile.php" == $_SERVER['PHP_SELF']) ? 'class="active"' : ""; ?>>
