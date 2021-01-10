@@ -4,10 +4,10 @@
  */
 define("HOSTNAME", "localhost");
 define("USERNAME", "root");
-define("PASSWORD", "");
-define("DATABASE", "timer");
+define("PASSWORD", "root");
+define("DATABASE", "local");
 
 /**
  * Version
  */
-define("APP_VERSION", "1.0.2");
+define("APP_VERSION", "0.1.0");
