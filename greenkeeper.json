@@ -1,0 +1,22 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "assets/bower_components/Flot/package.json",
+        "assets/bower_components/bootstrap-datepicker/package.json",
+        "assets/bower_components/bootstrap-daterangepicker/package.json",
+        "assets/bower_components/bootstrap/package.json",
+        "assets/bower_components/chart.js/package.json",
+        "assets/bower_components/ckeditor/package.json",
+        "assets/bower_components/eve-raphael/package.json",
+        "assets/bower_components/ion.rangeSlider/package.json",
+        "assets/bower_components/jquery-knob/package.json",
+        "assets/bower_components/jquery-slimscroll/package.json",
+        "assets/bower_components/jquery-ui/package.json",
+        "assets/bower_components/morris.js/package.json",
+        "assets/bower_components/select2/package.json",
+        "package.json"
+      ]
+    }
+  }
+}

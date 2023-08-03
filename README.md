@@ -1,5 +1,5 @@
 # Time Tracking App (v1.0.2)
-[![Build Status](https://travis-ci.org/usmanaliqureshi/timetrackingapp.svg?branch=master)](https://travis-ci.org/usmanaliqureshi/timetrackingapp)
+[![Build Status](https://travis-ci.org/usmanaliqureshi/timetrackingapp.svg?branch=master)](https://travis-ci.org/usmanaliqureshi/timetrackingapp) [![Greenkeeper badge](https://badges.greenkeeper.io/usmanaliqureshi/timetrackingapp.svg)](https://greenkeeper.io/)
 
 This is a small app to track the time spent on each task of your daily work routine.
 
